@@ -20,9 +20,9 @@ if "GOOGLE_API_KEY" in st.secrets:
     os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # DB connection (Chinook.db must be in the working dir)
-db = SQLDatabase.from_uri("sqlite:///Chinook.db")
-conn = sqlite3.connect("Chinook.db")
-engine = create_engine("sqlite:///Chinook.db")
+db = SQLDatabase.from_uri("sqlite:///chinook.db")
+conn = sqlite3.connect("chinook.db")
+engine = create_engine("sqlite:///chinook.db")
 
 # LLM init (Gemini)
 llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
